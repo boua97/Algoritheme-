@@ -1,0 +1,28 @@
+//--------- algorithme qui lit une phrase ----------------- 
+
+ VAR
+      words,nbr_C,vowels : integer;
+      character : char;
+      words :=0;
+      nbr_C:=0;
+      vowels:=0; 
+BEGIN
+      WRITE("Saisir Votre Pharase");
+      READ(character);
+       REPEAT
+              
+            IF((character= '.' AND nbr_C <> 0)) OR ((character= ''AND nbr_C <> 0))) THEN
+              words := w + 1;
+
+             END_IF
+            IF(character <> '' AND character <> '.')THEN
+            nbr_C := nbr_C + 1;
+            IF(character ='a'OR 'e' OR 'i' OR 'u' OR 'o')THEN
+            vowals := vowals + 1;
+
+            END_IF
+        UNTIL (character <> '.');
+        WRITE(words);
+        WRITE(nbr_C);
+        WRITE(vowels);
+END
